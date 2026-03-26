@@ -251,11 +251,32 @@ The program will display a menu like:
 5. Tranfer
 6. Exit
 ## Output
+## CREATE ACCOUNT
+
+<img width="509" height="648" alt="image" src="https://github.com/user-attachments/assets/c08ed760-0acf-430f-828c-8a26e5c33557" />
+<img width="301" height="190" alt="image" src="https://github.com/user-attachments/assets/915f4501-e3ee-477e-8d7c-58404a8beacb" />
+<img width="331" height="174" alt="image" src="https://github.com/user-attachments/assets/f4ae466b-67e1-45de-8f13-166eb01af5cf" />
+
+
+## DEPOSIT
+<img width="507" height="634" alt="image" src="https://github.com/user-attachments/assets/f4d3db13-e695-4b9a-9e96-66d890d17712" />
+
+<img width="336" height="156" alt="image" src="https://github.com/user-attachments/assets/ec2e0b87-55c7-468a-9020-f5518dae8dab" />
+
+## TRANSFER
 <img width="519" height="650" alt="image" src="https://github.com/user-attachments/assets/c6e8349c-8768-4444-8ed1-a36c79abda89" />
 
-
-
 <img width="350" height="120" alt="image" src="https://github.com/user-attachments/assets/b1590a6d-08df-4f97-be51-44ccdc477800" />
+
+## WITHDRAW
+<img width="501" height="632" alt="image" src="https://github.com/user-attachments/assets/a67d010c-ef71-474d-b9ab-45c2cdddbc55" />
+
+<img width="354" height="145" alt="image" src="https://github.com/user-attachments/assets/bf53cf26-df52-4efb-aaf6-811457f08e53" />
+
+## CHECK BALANCE
+<img width="513" height="663" alt="image" src="https://github.com/user-attachments/assets/6d95b953-2672-45d9-8161-81212a131cf8" />
+
+<img width="267" height="181" alt="image" src="https://github.com/user-attachments/assets/26215ba4-8a9f-4fe9-a937-bdad782473b0" />
 
 ## Author
 
