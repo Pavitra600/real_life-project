@@ -62,13 +62,29 @@ class Bank:
             return True
         return False
 
+    def transfer(self, from_acc, to_acc, amount):
+        if not self.account_exists(from_acc) or not self.account_exists(to_acc):
+            return "Account not found"
+
+        from_balance = self.get_balance(from_acc)
+
+        if from_balance < amount:
+            return "Insufficient balance"
+
+        to_balance = self.get_balance(to_acc)
+
+        self.update_balance(from_acc, from_balance - amount)
+        self.update_balance(to_acc, to_balance + amount)
+
+        return "Success"
+
 
 class BankApp:
     def __init__(self, root):
         self.bank = Bank()
         self.root = root
         self.root.title("Pavitra Banking System 💙")
-        self.root.geometry("420x420")
+        self.root.geometry("420x500")
         self.root.configure(bg="#d9f2ff")
 
         tk.Label(root, text="Pavitra Banking System", 
@@ -77,6 +93,10 @@ class BankApp:
         tk.Label(root, text="Account Number", bg="#d9f2ff").pack()
         self.acc_entry = tk.Entry(root)
         self.acc_entry.pack()
+
+        tk.Label(root, text="Receiver Account", bg="#d9f2ff").pack()
+        self.to_acc_entry = tk.Entry(root)
+        self.to_acc_entry.pack()
 
         tk.Label(root, text="Name", bg="#d9f2ff").pack()
         self.name_entry = tk.Entry(root)
@@ -94,6 +114,9 @@ class BankApp:
 
         tk.Button(root, text="Withdraw", bg="orange", fg="white",
                   command=self.withdraw).pack(pady=5)
+
+        tk.Button(root, text="Transfer", bg="red", fg="white",
+                  command=self.transfer).pack(pady=5)
 
         tk.Button(root, text="Check Balance", bg="purple", fg="white",
                   command=self.check_balance).pack(pady=5)
@@ -147,6 +170,24 @@ class BankApp:
             messagebox.showinfo("Success", "Amount withdrawn")
         else:
             messagebox.showerror("Error", "Insufficient balance or account not found")
+
+    def transfer(self):
+        from_acc = self.acc_entry.get()
+        to_acc = self.to_acc_entry.get()
+        amount = self.amount_entry.get()
+
+        try:
+            amount = float(amount)
+        except:
+            messagebox.showerror("Error", "Enter valid amount")
+            return
+
+        result = self.bank.transfer(from_acc, to_acc, amount)
+
+        if result == "Success":
+            messagebox.showinfo("Success", "Amount transferred successfully")
+        else:
+            messagebox.showerror("Error", result)
 
     def check_balance(self):
         acc = self.acc_entry.get()
