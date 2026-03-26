@@ -1,1 +1,2 @@
-101,Pavitra J,10000.0
+101,Pavitra J,10500.0
+100,pavitra,1000.0
